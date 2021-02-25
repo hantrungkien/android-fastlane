@@ -11,7 +11,7 @@ RUN apt-get update \
 ADD Gemfile /Gemfile
 ADD Gemfile.lock /Gemfile.lock	
 
-RUN gem update --system \
+RUN gem update --system 3.1.4 \
 && gem install bundler \
 && bundle install \
 && gem install fastlane \
